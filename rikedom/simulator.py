@@ -11,15 +11,21 @@ from datetime import datetime
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-def init
+class TradingSimulator:
+    def __init__(self, data, step_function):
+        self.data = data
+        self.step_function = step_function
+        self.available_data = None
 
-def perform_simulation(data):
-    for simulated_date in data.index:
-        step(data, simulated_date)
 
-def step(data, simulated_date, function=None):
-    data_available_until = simulated_date - Timedelta('1 days')
-    available_data = data[:data_available_until]
+    def perform_simulation(self):
+        for simulated_date in self.data.index:
+            self.available_data = self.get_available_data(self.data, simulated_date)
+            self.step_function(self.available_data, simulated_date)
 
-    function(data, simulated_date)
+    @staticmethod
+    def get_available_data(data, simulated_date):
+        data_available_until = simulated_date - Timedelta('1 days')
+        available_data = data[:data_available_until]
+        return available_data
 
