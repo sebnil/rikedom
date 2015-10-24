@@ -1,15 +1,13 @@
 from zipline.utils.factory import load_from_yahoo as uncached_load_from_yahoo
 from zipline.utils.factory import load_bars_from_yahoo as uncached_load_bars_from_yahoo
 
-from rikedom import caching
+from helpers import caching
 from pandas import read_csv
 from urllib import urlopen
 
 @caching.region.cache_on_arguments()
 def load_from_yahoo(*args, **kwargs):
-    print('load_from_yahoo: {}'.format(locals()))
     return uncached_load_from_yahoo(*args, **kwargs)
-
 
 @caching.region.cache_on_arguments()
 def load_bars_from_yahoo(*args, **kwargs):

@@ -7,7 +7,7 @@ from dogpile.cache.proxy import ProxyBackend
 #import dogpile.cache.api
 import os
 import logging
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 from pickle import PicklingError
 
 def my_key_generator(namespace, fn):
@@ -21,8 +21,8 @@ def my_key_generator(namespace, fn):
             picklestring = pickle.dumps((namespace, args, kwargs))
         except (PicklingError, TypeError):
             picklestring = pickle.dumps((str(namespace), str(args), str(kwargs)))
-        dk = hashlib.sha256(picklestring)
-        key = dk.hexdigest()
+        dk = hashlib.pbkdf2_hmac('sha256', picklestring, b'saltochpeppar', 100000)
+        key = binascii.hexlify(dk)
         return key
 
     return generate_key
