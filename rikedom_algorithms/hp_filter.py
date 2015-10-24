@@ -3,8 +3,6 @@ from __future__ import absolute_import, division, print_function
 from builtins import (bytes, str, open, super, range,
                       zip, round, input, int, pow, object)
 # regular imaports below:
-import sys
-sys.path.append('../../zipline-test/') # add parent directory to path
 from rikedom.security_loader import load_from_yahoo
 from rikedom import caching
 
