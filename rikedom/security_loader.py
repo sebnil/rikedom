@@ -1,7 +1,7 @@
 from zipline.utils.factory import load_from_yahoo as uncached_load_from_yahoo
 from zipline.utils.factory import load_bars_from_yahoo as uncached_load_bars_from_yahoo
 
-from helpers import caching
+import caching
 from pandas import read_csv
 from urllib import urlopen
 

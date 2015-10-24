@@ -8,3 +8,11 @@
 .idea/rikedom.iml
 
 .idea/vcs.xml
+
+*.db
+
+*.db
+
+*.pyc
+
+*.db
