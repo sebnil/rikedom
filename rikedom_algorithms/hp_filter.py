@@ -16,7 +16,7 @@ import statsmodels.api as sm
 class HodrickPrescottAlgorithm(TradingSimulator):
 
     def __init__(self):
-        super().__init__()
+        super(HodrickPrescottAlgorithm, self).__init__()
 
         self.cash = 10000 #sek
         self.stock_assets = {}
