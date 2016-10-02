@@ -4,9 +4,7 @@ from builtins import (bytes, str, open, super, range,
                       zip, round, input, int, pow, object)
 # regular imaports below:
 from rikedom.security_loader import load_from_yahoo
-from rikedom import caching
 
-from pandas import Timedelta
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -18,7 +16,7 @@ import statsmodels.api as sm
 class HodrickPrescottAlgorithm(TradingSimulator):
 
     def __init__(self):
-        super.__init__()
+        super().__init__()
 
         self.cash = 10000 #sek
         self.stock_assets = {}

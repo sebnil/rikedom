@@ -3,15 +3,12 @@ from __future__ import absolute_import, division, print_function
 from builtins import (bytes, str, open, super, range,
                       zip, round, input, int, pow, object)
 # regular imaports below:
-from rikedom.security_loader import load_from_yahoo
 from pandas import Timedelta
-from datetime import datetime
 import logging
 logging.basicConfig(level=logging.DEBUG)
-import pandas as pd
 
 class TradingSimulator:
-    def __init__(self, data, step_function):
+    def __init__(self, data=None, step_function=None):
         self.data = data
         #self.step_function = step_function
         self.available_data = None

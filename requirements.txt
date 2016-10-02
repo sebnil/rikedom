@@ -1,2 +1,6 @@
 future
 zipline
+requests
+
+nose
+coverage

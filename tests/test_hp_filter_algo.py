@@ -22,7 +22,7 @@ class MyTestCase(unittest.TestCase):
             'SAND.ST', # sandvik. industry. beta 1.21,
             'AAK.ST', # food. 0.63,
             'ALFA.ST', # alfa laval. industry. 1.0
-            'ASSAB.ST', # assa abloy (locks). industry. beta 0.89
+            'ASSA-B.ST', # assa abloy (locks). industry. beta 0.89
             'NCC-A.ST', # NCC. construction. 1.22
             'WALL-B.ST', # wallenstam. property. 0.63,
             'STL.OL', #statoil. norwegian. 1,08
