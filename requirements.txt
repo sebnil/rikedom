@@ -1,6 +1,7 @@
 future
 #zipline, better to install using conda install -c Quantopian zipline
 requests
+dogpile.cache
 
 nose
 coverage
