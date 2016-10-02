@@ -1,5 +1,5 @@
 future
-zipline
+#zipline, better to install using conda install -c Quantopian zipline
 requests
 
 nose

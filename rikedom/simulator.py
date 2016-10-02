@@ -7,7 +7,7 @@ from pandas import Timedelta
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-class TradingSimulator:
+class TradingSimulator(object):
     def __init__(self, data=None, step_function=None):
         self.data = data
         #self.step_function = step_function

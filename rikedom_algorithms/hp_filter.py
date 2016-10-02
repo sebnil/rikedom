@@ -13,7 +13,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 import statsmodels.api as sm
 
-class HodrickPrescottAlgorithm(TradingSimulator):
+class HodrickPrescottAlgorithm(object, TradingSimulator):
 
     def __init__(self):
         super(HodrickPrescottAlgorithm, self).__init__()
