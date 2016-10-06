@@ -7,8 +7,7 @@ node {
     bat 'pip install -r requirements.txt'
 
 	stage 'Test'
-	bat 'nosetests -w tests --with-coverage --cover-package=rikedom'
-
+	bat 'nosetests -w tests --with-xunit --with-coverage --cover-package=rikedom --verbosity=2'
 	stage 'Archive'
 	archive 'nosetests.xml'
 }
