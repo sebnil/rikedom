@@ -3,7 +3,7 @@ node {
 	checkout scm
 
 	stage 'Install requirements'
-    bat 'conda install -c Quantopian zipline'
+    // bat 'conda install -c Quantopian zipline'
     bat 'pip install -r requirements.txt'
 
 	stage 'Test'
