@@ -8,6 +8,10 @@ node {
 
 	stage 'Test'
 	bat 'nosetests -w tests --with-xunit --with-coverage --cover-package=rikedom --verbosity=2'
+
 	stage 'Archive'
 	archive 'nosetests.xml'
+
+	stage 'Publish'
+	step([$class: 'JUnitResultArchiver', testResults: 'nosetests.xml'])
 }
