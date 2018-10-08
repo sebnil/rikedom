@@ -9,3 +9,8 @@ notebooks/.ipynb_checkpoints/
 *.pyc
 
 *.lock
+
+/nosetests.xml
+/rikedom/cachefile.dbm.dat
+/rikedom/cachefile.dbm.dir
+/.coverage
