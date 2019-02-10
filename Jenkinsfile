@@ -1,4 +1,4 @@
-node {
+node('Python && Windows') {
 	stage('Checkout')
 	{
 		checkout scm
